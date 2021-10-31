@@ -10,7 +10,7 @@ https://api-tools.getlaminas.org/
 #### How to use the image:
 ```console
 bscpaz@2am:/$ docker build -t laminas .
-bscpaz@2am:/$ docker run -d -p 8000:80 -v $(pwd):/var/www laminas
+bscpaz@2am:/$ docker run -d -p 8000:80 -v $(pwd):/var/www --name laminas laminas
 ```
 <hr>
 <h4 align="center">Known issues</h4>
