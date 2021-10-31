@@ -6,3 +6,13 @@
 
 #### Api Laminas website:
 https://api-tools.getlaminas.org/
+
+<hr>
+<h4 align="center">Known issues</h4>
+
+```
+Issue: 
+  "failed to solve with frontend dockerfile.v0: failed to build LLB"
+Solution: 
+  Docker desktop -> Settings -> Docker Engine -> Change the "features": { buildkit: true} to "features": { buildkit: false}.
+```
