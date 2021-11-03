@@ -9,8 +9,40 @@ https://api-tools.getlaminas.org/
 
 #### How to use the image:
 ```console
-bscpaz@2am:/$ docker-compose up
+bscpaz@2am:/$ docker-compose up -d
 ```
+
+#### Database tables on balance.sqlite:
+```sql
+CREATE TABLE tb_users (
+  id_user INT PRIMAY KEY, 
+  name TEXT NOT NULL, 
+  email TEXT NOT NULL UNIQUE 
+);
+
+CREATE TABLE tb_stocks (
+  id_stock INT PRIMAY KEY,
+  ticker varchar(6) NOT NULL UNIQUE, 
+  company TEXT NOT NULL
+);
+
+CREATE TABLE tb_users_stocks (
+  id_users_stocks INT PRIMAY KEY,
+  id_user INT NOT NULL, 
+  id_stock INT NOT NULL,
+  amount INT NOT NULL,
+  date,
+  FOREIGN KEY (id_user) 
+    REFERENCES tb_users (id_user) 
+       ON DELETE CASCADE 
+       ON UPDATE NO ACTION,
+  FOREIGN KEY (id_stock) 
+    REFERENCES tb_stocks (id_stock) 
+       ON DELETE CASCADE 
+       ON UPDATE NO ACTION  
+);
+```
+
 #### URL:
 ```console
 http://localhost:8080
