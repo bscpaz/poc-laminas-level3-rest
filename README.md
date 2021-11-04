@@ -37,7 +37,7 @@ CREATE TABLE tb_stocks (
 );
 
 CREATE TABLE tb_users_stocks (
-  id_users_stocks INT PRIMAY KEY,
+  id_user_stock INT PRIMAY KEY,
   id_user INT NOT NULL, 
   id_stock INT NOT NULL,
   amount INT NOT NULL,
@@ -51,6 +51,15 @@ CREATE TABLE tb_users_stocks (
        ON DELETE CASCADE 
        ON UPDATE NO ACTION  
 );
+
+INSERT INTO tb_users (id_user, name, email) VALUES (1, 'Bruno Paz', 'soujava@gmail.com');
+
+INSERT INTO tb_stocks (id_stock, ticker, company) VALUES (1, 'ABEV3', 'Ambev S.A');
+
+INSERT INTO tb_stocks (id_stock, ticker, company) VALUES (2, 'WEGE3', 'Weg S.A');
+
+INSERT INTO tb_users_stocks (id_user_stock, id_user, id_stock, amount, date) 
+VALUES (1, 1, 1, 500, datetime('now'));
 ```
 
 #### URL:
