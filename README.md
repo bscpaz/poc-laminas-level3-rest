@@ -12,6 +12,13 @@ https://api-tools.getlaminas.org/
 bscpaz@2am:/$ docker-compose up -d
 ```
 
+#### How to create database's tables:
+```console
+bscpaz@2am:/$ docker exec -it bscpaz/laminas-rest-level3 bash
+root@php:/$ sqlite balance.sqlite
+```
+
+
 #### Database tables on balance.sqlite:
 ```sql
 CREATE TABLE tb_users (
