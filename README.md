@@ -18,6 +18,7 @@ bscpaz@2am:/$ docker exec -it api-laminas bash
 www-data@php:/$ touch balance.sqlite
 www-data@php:/$ sqlite3 balance.sqlite
 sqlite> CREATE TABLE ...
+sqlite> .tables   //to show the tables
 ```
 
 
