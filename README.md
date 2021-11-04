@@ -31,7 +31,7 @@ CREATE TABLE tb_users_stocks (
   id_user INT NOT NULL, 
   id_stock INT NOT NULL,
   amount INT NOT NULL,
-  date,
+  date TEXT NOT NULL,
   FOREIGN KEY (id_user) 
     REFERENCES tb_users (id_user) 
        ON DELETE CASCADE 
