@@ -15,7 +15,8 @@ bscpaz@2am:/$ docker-compose up -d
 #### How to create database's tables:
 ```console
 bscpaz@2am:/$ docker exec -it api-laminas bash
-root@php:/$ sqlite balance.sqlite
+www-data@php:/$ touch balance.sqlite
+www-data@php:/$ sqlite balance.sqlite
 ```
 
 
