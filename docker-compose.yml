@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  api-laminas:
+    container_name: 
+      api-laminas # Because Docker container names must be unique, 
+                  # you cannot scale a service beyond 1 container if 
+                  # you have specified a custom name.
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bscpaz/api-laminas
+    ports:
+     - "8080:80"
+    volumes:
+     - .:/var/www
