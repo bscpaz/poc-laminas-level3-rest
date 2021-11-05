@@ -67,6 +67,13 @@ VALUES (1, 1, 1, 500, datetime('now'));
 http://localhost:8080
 ```
 
+#### How to make request:
+Use Thunder Client plugin on VSCode
+
+```console
+
+```
+
 <hr>
 <h4 align="center">Known issues</h4>
 
