@@ -68,10 +68,11 @@ http://localhost:8080
 ```
 
 #### How to make request:
-Use Thunder Client plugin on VSCode
+Use _Thunder Client_ plugin on VSCode
 
 ```console
-
+http://localhost:8080/users
+http://localhost:8080/stocks
 ```
 
 <hr>
